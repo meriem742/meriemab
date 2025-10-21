@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Mery</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="contact-body">
+  <header class="minimal-header">
+    <div class="logo">Mery</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="tp.html">TP</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2 class="bubblegum-title">Contact Me</h2>
+    <p class="contact-subtext">Got a project or just want to say hi? Let’s connect!</p>
+
+    <form class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+     <button type="submit">Send Message</button>
+    </form>
+
+    <p class="end-text">Made with love 💗 by Mery</p
+</form>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("1IeTKGOXX9iPt7xRt"); // المفتاح العمومي تاعك
+  })();
+
+  document.querySelector(".contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_c4p6bxb", "template_mfycs2l", this)
+      .then(function() {
+        alert("✅ Message sent successfully!");
+      }, function(error) {
+        console.log("Error:", error);
+        alert("❌ Failed to send message. Check console for details.");
+      });
+  });
+</script>
+</body>
+</html>

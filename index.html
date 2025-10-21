@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f7f3ef;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #f472b6;
+    }
+    nav a {
+      text-decoration: none;
+      color: #444;
+      margin-left: 25px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #f472b6;
+    }
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .home h1 {
+      font-size: 48px;
+      color: #f472b6;
+      margin-bottom: 10px;
+    }
+    .home p {
+      font-size: 18px;
+      color: #666;
+      max-width: 600px;
+    }
+
+    /* 🌷 Tulip Frame */
+    .tulip-frame {
+      position: relative;
+      width: 370px;
+      height: 370px;
+      margin-top: 40px;
+    }
+    .tulip-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 10px solid #f9a8d4;
+      box-shadow: 0 0 25px rgba(249, 168, 212, 0.5);
+      background: white;
+      position: relative;
+      z-index: 2;
+    }
+    .tulip-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 440px;
+      height: 440px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .tulip {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 28px;
+      transform-origin: center;
+      filter: drop-shadow(0 0 6px rgba(249, 168, 212, 0.7));
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 4px rgba(249, 168, 212, 0.5)); }
+      to { filter: drop-shadow(0 0 14px rgba(249, 168, 212, 0.9)); }
+    }
+    .tulip:nth-child(1)  { transform: rotate(0deg)   translate(220px) rotate(0deg); }
+    .tulip:nth-child(2)  { transform: rotate(30deg)  translate(220px) rotate(-30deg); }
+    .tulip:nth-child(3)  { transform: rotate(60deg)  translate(220px) rotate(-60deg); }
+    .tulip:nth-child(4)  { transform: rotate(90deg)  translate(220px) rotate(-90deg); }
+    .tulip:nth-child(5)  { transform: rotate(120deg) translate(220px) rotate(-120deg); }
+    .tulip:nth-child(6)  { transform: rotate(150deg) translate(220px) rotate(-150deg); }
+    .tulip:nth-child(7)  { transform: rotate(180deg) translate(220px) rotate(-180deg); }
+    .tulip:nth-child(8)  { transform: rotate(210deg) translate(220px) rotate(-210deg); }
+    .tulip:nth-child(9)  { transform: rotate(240deg) translate(220px) rotate(-240deg); }
+    .tulip:nth-child(10) { transform: rotate(270deg) translate(220px) rotate(-270deg); }
+    .tulip:nth-child(11) { transform: rotate(300deg) translate(220px) rotate(-300deg); }
+    .tulip:nth-child(12) { transform: rotate(330deg) translate(220px) rotate(-330deg); }
+
+    /* 🌸 Download CV Button */
+    .cv-btn {
+      margin-top: 40px;
+      background: #f7f3ef;
+      color: #f472b6;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      padding: 14px 38px;
+      border-radius: 50px;
+      box-shadow: 8px 8px 15px #dcd6d1, -8px -8px 15px #ffffff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .cv-btn:hover {
+      box-shadow: inset 6px 6px 10px #dcd6d1, inset -6px -6px 10px #ffffff;
+      transform: translateY(-3px);
+    }
+    .cv-btn:active {
+      transform: translateY(2px);
+    }
+
+  </style>
+</head>
+<body class="home-body">
+  <header class="minimal-header">
+    <div class="logo">Mery<span class="dot">.</span></div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="tp.html">TP</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="intro">
+    <div class="intro-text">
+      <p class="handwritten">Hi. Since you're here...</p>
+      <h1>This is <span class="highlight">Meriem</span></h1>
+      <p class="subtitle">Student in Master 2 Informatique Web</p>
+
+      <!-- 🌸 زر تحميل الـ CV -->
+      <button class="download-btn" onclick="window.location.href='Meriem_Abaci_CV.pdf'">
+   📄Download my CV
+</button>
+    </div>
+
+    <div class="tulip-frame">
+      <img src="photo.jpg" alt="Mimi portrait">
+      <div class="tulip-ring">
+        <span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span>
+        <span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span>
+        <span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
